@@ -7,6 +7,7 @@ public class PessoaFisica {
     private String matricula;
     private String sexo;
     private String email;
+    private String tipo;
 
     public float calcularCompletudeExclusiva() {
         int contador = 0;

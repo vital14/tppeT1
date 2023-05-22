@@ -34,5 +34,10 @@ public class AuthorTest {
 	public void testOrExclusiveIncomplete() {
 		assertFalse(authorWithoutIdentifier.checkExclusiveOrFields());
 	}
+	
+	@Test
+	public void testOneIdentifierComplete() {
+		assertTrue(authorWithOneIdentifier.checkExclusiveOrFields());
+	}
 
 }

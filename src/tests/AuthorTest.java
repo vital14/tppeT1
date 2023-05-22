@@ -23,6 +23,7 @@ public class AuthorTest {
 
 
 	// TESTE OR EXCLUSIVO
+	// METODO ADICIONADO NO COMMIT ANTERIOR
 	@Test
 	public void testOrExclusivoCompleto() {
 		assertTrue(authorComplete.checkExclusiveOrFields());

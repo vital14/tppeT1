@@ -11,7 +11,6 @@ public class Author {
 
     // Or Exclusivo
     private String identifierLattes;
-
     private String identifierOrcId;
 
     public Author(String nationality, String birthCountry, String birthCity, String birthState, String identifierLattes, String identifierOrcId) {
@@ -25,9 +24,12 @@ public class Author {
 
     float returnCompleteValue() {
         float result = 0f;
-        result += 0.5;
+        if(checkExclusiveOrFields()) result += 0.5;
         result += 0.5;
         return result;
     }
-
+    
+    public boolean checkExclusiveOrFields() {
+        return true;
+    }
 }

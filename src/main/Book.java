@@ -19,7 +19,10 @@ public class Book {
         if (title != null) result += 0.25f;
         if (publicationDate != null) result += 0.25f;
         if (language != null) result += 0.25f;
-        if (author != null) result += 0.25f;
+        if (author != null) {
+            result += (author.returnCompleteValue() * 0.25f);
+        }
+
         return result;
     }
 }

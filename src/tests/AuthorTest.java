@@ -4,6 +4,7 @@ import main.Author;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class AuthorTest {
@@ -27,6 +28,11 @@ public class AuthorTest {
 	@Test
 	public void testOrExclusivoCompleto() {
 		assertTrue(authorComplete.checkExclusiveOrFields());
+	}
+	
+	@Test
+	public void testOrExclusiveIncomplete() {
+		assertFalse(authorWithoutIdentifier.checkExclusiveOrFields());
 	}
 
 }

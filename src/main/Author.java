@@ -30,6 +30,7 @@ public class Author {
     }
     
     public boolean checkExclusiveOrFields() {
-        return true;
+        if (this.identifierLattes != null || this.identifierOrcId != null) return true;
+        return false;
     }
 }

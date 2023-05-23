@@ -4,13 +4,13 @@ public class Book {
     private String title;
     private String publicationDate;
     private String language;
-    private Author author;
+    private Author[] authors;
 
-    public Book(String title, String publicationDate, String language, Author author) {
+    public Book(String title, String publicationDate, String language, Author[] author) {
         this.title = title;
         this.publicationDate = publicationDate;
         this.language = language;
-        this.author = author;
+        this.authors = author;
     }
 
     float valorCompletude() {
@@ -19,8 +19,8 @@ public class Book {
         if (title != null) result += 0.25f;
         if (publicationDate != null) result += 0.25f;
         if (language != null) result += 0.25f;
-        if (author != null) {
-            result += (author.returnCompleteValue() * 0.25f);
+        if (authors != null) {
+            result += (authors[0].returnCompleteValue() * 0.25f);
         }
 
         return result;

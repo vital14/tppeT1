@@ -34,6 +34,8 @@ public class Author {
     
     public float checkCompletenessMultiField() {
     	float result = 0f;
+    	if (checkExclusiveOrFields()) result += 0.5f;
+    	if (checkInclusiveOrFields()) result += 0.5f;
     	
     	return result;
     }

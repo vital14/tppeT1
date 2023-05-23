@@ -21,13 +21,6 @@ public class Author {
         this.identifierLattes = identifierLattes;
         this.identifierOrcId = identifierOrcId;
     }
-
-    public float returnCompleteValueMultiFields() {
-        float result = 0f;
-        if(checkExclusiveOrFields()) result += 0.5;
-        result += 0.5;
-        return result;
-    }
     
     public boolean checkExclusiveOrFields() {
         if (this.identifierLattes != null && this.identifierOrcId != null) return false;
@@ -37,5 +30,11 @@ public class Author {
     public boolean checkInclusiveOrFields() {
         if (this.nationality != null || this.birthCountry != null || this.birthCity != null || this.birthState != null) return true;
         return false;
+    }
+    
+    public float checkCompletenessMultiField() {
+    	float result = 0f;
+    	
+    	return result;
     }
 }

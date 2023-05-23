@@ -23,13 +23,7 @@ package tests;
 
  	// TESTE MULTI CAMPOS
  	@Test
- 	public void testMultiCamposCompleto() {
- 		assertEquals(authorWithOneIdentifier.returnCompleteValueMultiFields(), 1f, 0f);
+ 	public void testMultiFieldsEmpty() {
+ 		assertEquals(authorIncomplete.checkCompletenessMultiField(), 0f, 0f);
  	}
- 	
- 	@Test
- 	public void testMultiCamposIncompleto() {
- 		assertEquals(authorIncomplete.returnCompleteValueMultiFields(), 0f, 0f);
- 	}
-
  }

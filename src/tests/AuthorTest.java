@@ -63,6 +63,59 @@ public class AuthorTest {
 		
 		parameters.add(authorWithOneIdentifier);
 		
+		HashMap<String, Object> authorWithoutNationality = new HashMap<String, Object>();
+		
+		authorWithoutNationality.put("birthCountry", "Brasil");
+		authorWithoutNationality.put("birthCity", "Brasília");
+		authorWithoutNationality.put("birthState", "DF");
+		authorWithoutNationality.put("identifierLattes", "89273823");
+		authorWithoutNationality.put("identifierOrcId", "23232");
+		authorWithoutNationality.put("result", true);
+		
+		parameters.add(authorWithoutNationality);
+		
+		HashMap<String, Object> authorWithoutBirthCountry = new HashMap<String, Object>();
+		
+		authorWithoutBirthCountry.put("nationality", "Brasileira");
+		authorWithoutBirthCountry.put("birthCity", "Brasília");
+		authorWithoutBirthCountry.put("birthState", "DF");
+		authorWithoutBirthCountry.put("identifierLattes", "89273823");
+		authorWithoutBirthCountry.put("identifierOrcId", "23232");
+		authorWithoutBirthCountry.put("result", true);
+		
+		parameters.add(authorWithoutBirthCountry);
+		
+		HashMap<String, Object> authorWithoutBirthCity = new HashMap<String, Object>();
+		
+		authorWithoutBirthCity.put("nationality", "Brasileira");
+		authorWithoutBirthCity.put("birthCountry", "Brasil");
+		authorWithoutBirthCity.put("birthState", "DF");
+		authorWithoutBirthCity.put("identifierLattes", "89273823");
+		authorWithoutBirthCity.put("identifierOrcId", "23232");
+		authorWithoutBirthCity.put("result", true);
+		
+		parameters.add(authorWithoutBirthCity);
+		
+		HashMap<String, Object> authorWithoutBirthState = new HashMap<String, Object>();
+		
+		authorWithoutBirthState.put("nationality", "Brasileira");
+		authorWithoutBirthState.put("birthCountry", "Brasil");
+		authorWithoutBirthState.put("birthCity", "Brasília");
+		authorWithoutBirthState.put("identifierLattes", "89273823");
+		authorWithoutBirthState.put("identifierOrcId", "23232");
+		authorWithoutBirthState.put("result", true);
+		
+		parameters.add(authorWithoutBirthState);
+		
+		HashMap<String, Object> authorWithoutOrInclusive = new HashMap<String, Object>();
+		
+
+		authorWithoutOrInclusive.put("identifierLattes", "89273823");
+		authorWithoutOrInvlusive.put("identifierOrcId", "23232");
+		authorWithoutOrInclusive.put("result", false);
+		
+		parameters.add(authorWithoutOrInclusive);
+		
 		
 		
     	return parameters;
@@ -71,6 +124,12 @@ public class AuthorTest {
 	@Test
 	public void testOrExclusivo() {
 		assertEquals(author.checkExclusiveOrFields(), resultExpected);
+
+	}
+	
+	@Test
+	public void testOrInclusivo() {
+		assertEquals(author.checkInclusiveOrFields(), resultExpected);
 
 	}
 }

@@ -34,4 +34,8 @@ public class Author {
         if (this.identifierLattes == null && this.identifierOrcId == null) return false;
         return true;
     }
+    public boolean checkInclusiveOrFields() {
+        if (this.nationality != null || this.birthCountry != null || this.birthCity != null || this.birthState != null) return true;
+        return false;
+    }
 }

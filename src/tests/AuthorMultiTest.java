@@ -31,4 +31,9 @@ package tests;
  	public void testMultiFieldsComplete() {
  		assertEquals(authorWithOneIdentifier.checkCompletenessMultiField(), 1f, 0f);
  	}
+ 	
+ 	@Test
+ 	public void testMultiFieldsHalfComplete() {
+ 		assertEquals(authorWithoutIdentifier.checkCompletenessMultiField(), 0.5f, 0f);
+ 	}
  }

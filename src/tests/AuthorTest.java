@@ -38,7 +38,7 @@ public class AuthorTest {
 		authorComplete.put("birthState", "DF");
 		authorComplete.put("identifierLattes", "89273823");
 		authorComplete.put("identifierOrcId", "23232");
-		authorComplete.put("result", true);
+		authorComplete.put("result", false);
 		
 		parameters.add(authorComplete);
 		

@@ -71,6 +71,6 @@ public class AuthorTest {
 	@Test
 	public void testOrExclusivo() {
 		assertEquals(author.checkExclusiveOrFields(), resultExpected);
-		
+
 	}
 }

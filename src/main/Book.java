@@ -20,7 +20,7 @@ public class Book {
         if (publicationDate != null) result += 0.25f;
         if (language != null) result += 0.25f;
         if (authors != null) {
-            result += (authors[0].returnCompleteValue() * 0.25f);
+            result += (authors[0].returnCompleteValueMultiFields() * 0.25f);
         }
 
         return result;

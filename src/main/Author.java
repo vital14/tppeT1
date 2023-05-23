@@ -22,7 +22,7 @@ public class Author {
         this.identifierOrcId = identifierOrcId;
     }
 
-    float returnCompleteValue() {
+    public float returnCompleteValueMultiFields() {
         float result = 0f;
         if(checkExclusiveOrFields()) result += 0.5;
         result += 0.5;

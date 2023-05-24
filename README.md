@@ -15,5 +15,5 @@ TPPE - Técnicas de Programação para Plataformas Emergentes
 
 Para execução do projeto é necessário ter instalado um jdk development kit.
 
-- Vá a pasta main/tests e rode os tests com o jUnit pra verificar a completude das entradas dentro do json de acordo com os métodos definidos.
+- Vá a pasta main/tests e rode os tests com o jUnit pra verificar a completude das entradas dentro do json que se encontra em data de acordo com os métodos definidos.
 

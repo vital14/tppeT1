@@ -28,6 +28,7 @@ public class Book {
         	for (Author a : authors) {
         		partialAuthorCompleteness += a.checkCompletenessMultiField();
         	}
+        	System.out.println(partialAuthorCompleteness);
         	result += (partialAuthorCompleteness / authors.size()) * 0.25f;
         }
 

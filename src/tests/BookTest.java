@@ -2,6 +2,7 @@ package tests;
 
 import main.Author;
 import main.Book;
+import main.InvalidCharacterException;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -52,8 +53,13 @@ public class BookTest {
 				
 				for (Object author : authors) {
 					JSONObject newAuthor = (JSONObject) author;
-					bookAuthors.add(new Author((String) newAuthor.get("nationality"), (String)newAuthor.get("birthCountry"), (String)newAuthor.get("birthCity"), (String)newAuthor.get("birthState"), 
-							(String)newAuthor.get("identifier.lattes"), (String)newAuthor.get("identifier.orcid")));
+					try {
+						bookAuthors.add(new Author((String) newAuthor.get("nationality"), (String)newAuthor.get("birthCountry"), (String)newAuthor.get("birthCity"), (String)newAuthor.get("birthState"), 
+								(String)newAuthor.get("identifier.lattes"), (String)newAuthor.get("identifier.orcid")));
+					} catch (InvalidCharacterException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 				
 				books.add(new Book((String)newBook.get("title"), (String)newBook.get("publicationDate"), (String)newBook.get("language"), bookAuthors));

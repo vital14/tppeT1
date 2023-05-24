@@ -20,8 +20,8 @@ public class ExceptionTest {
     }
 
     @Test(expected = InvalidCharacterException.class)
-    public void testInvalidNumberException() throws InvalidCharacterException {
-        String invalidNationality = "Brasileira1";
+    public void testInvalidEmptyException() throws InvalidCharacterException {
+        String invalidNationality = "  ";
         String birthCountry = "Brasil";
         String birthCity = "Brasilia";
         String birthState = "DF";
